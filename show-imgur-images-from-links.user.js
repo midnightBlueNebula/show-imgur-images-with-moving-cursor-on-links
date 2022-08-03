@@ -17,6 +17,7 @@
     document.body.insertBefore(img, document.body.firstElementChild);
 
     img.style.position = "absolute";
+    img.style.zIndex = "1000";
     hideImgElement();
     img.style.width = "auto";
     img.style.height = "auto";
