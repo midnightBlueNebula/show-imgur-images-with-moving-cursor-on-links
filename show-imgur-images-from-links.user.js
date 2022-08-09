@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-    const linkExp = new RegExp(/^https:\/\/(imgur|i.imgur).com\//);
+    const linkExp = new RegExp(/^(http|https):\/\/(imgur|i.imgur).com\//);
     const img = document.createElement("img");
 
     document.body.insertBefore(img, document.body.firstElementChild);
