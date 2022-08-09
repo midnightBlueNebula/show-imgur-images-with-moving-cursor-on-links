@@ -50,9 +50,12 @@
         if(isLinkFromImgur(link)){
             img.src = link;
             img.onload = function() {
-                const rect = {x: event.pageX, y: event.pageY};
-                img.style.left = rect.x + "px";
-                img.style.top = rect.y + "px";
+                const coords = {x: event.pageX, y: event.pageY};
+                if(coords.y - window.scrollY + img.getBoundingClientRect().height > window.innerHeight){
+                    coords.y -= img.getBoundingClientRect().height;
+                }
+                img.style.left = coords.x + "px";
+                img.style.top = coords.y + "px";
             }
         }
     }
