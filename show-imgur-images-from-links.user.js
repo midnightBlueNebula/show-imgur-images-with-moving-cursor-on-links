@@ -54,6 +54,9 @@
                 if(coords.y - window.scrollY + img.getBoundingClientRect().height > window.innerHeight){
                     coords.y -= img.getBoundingClientRect().height;
                 }
+                if(coords.x + window.scrollX + img.getBoundingClientRect().width > window.innerWidth){
+                    coords.x -= img.getBoundingClientRect().width;
+                }
                 img.style.left = coords.x + "px";
                 img.style.top = coords.y + "px";
             }
